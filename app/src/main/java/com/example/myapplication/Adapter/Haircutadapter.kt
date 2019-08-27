@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.myapplication.R
+import com.example.haircare.R
 import com.example.myapplication.model.haircuts
 import kotlinx.android.synthetic.main.buildadapter.view.*
 

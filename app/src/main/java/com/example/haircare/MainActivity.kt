@@ -19,7 +19,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.buildadapter.*
 
 class MainActivity : AppCompatActivity() {
-
+//test
     var manager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {

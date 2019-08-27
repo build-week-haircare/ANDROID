@@ -45,7 +45,11 @@
             android:layout_height="wrap_content"
             android:text="Stylist login"
             tools:layout_editor_absoluteY="278dp"
-            android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="@+id/signup_button"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="@+id/signup_button"
             app:layout_constraintEnd_toEndOf="@+id/user_button"/>
+
+
+
 
 </LinearLayout>

@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.buildadapter.view.*
 
 class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Haircutadapter.ViewHolder>() {
 
-
+//the image views
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
         val profile: ImageView = view.profile_image
         val  hair1 : ImageView = view.cut_1
@@ -22,7 +22,7 @@ class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Hair
         val text : TextView = view.bio
     }
 
-
+     // calling the layout Inflater to get what our images will be
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       val viewGroup =  LayoutInflater.from(parent.context).inflate(R.layout.buildadapter,parent, false)
        return ViewHolder(viewGroup)
@@ -31,7 +31,7 @@ class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Hair
     override fun getItemCount(): Int {
         return data.size
     }
-
+       //setting our viewholder
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
        holder.profile.setImageDrawable(data[position].profilepic)
        holder.hair1.setImageDrawable(data[position].cut1)

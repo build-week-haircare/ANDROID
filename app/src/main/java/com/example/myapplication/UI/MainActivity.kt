@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.Adapter.Haircutadapter
 import com.example.myapplication.R
 import kotlinx.android.synthetic.main.buildadapter.*
-//need to commit for a commit 
+//need to commit for a commit
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {

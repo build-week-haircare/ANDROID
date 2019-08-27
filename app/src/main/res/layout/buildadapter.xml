@@ -47,6 +47,23 @@
             tools:layout_editor_absoluteY="409dp"
             tools:layout_editor_absoluteX="-29dp"/>
 
+    <LinearLayout
+                  android:orientation="vertical"
+                  android:layout_gravity="center"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/refresh_button"
+                android:src="@drawable/refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+    </LinearLayout>
+
+
 
 
 

@@ -1,6 +1,8 @@
 package com.example.haircare
 
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -29,6 +31,23 @@ class MainActivity : AppCompatActivity() {
 
         ShowSignupPage()
         ShowLoginPage()
+
+        share_photo.setOnClickListener {
+            val imageUri = Uri.parse("android.resource://" + packageName
+                    + "/drawable/" + "haircutone")
+            val shareIntent = Intent()
+            shareIntent.action = Intent.ACTION_SEND
+            shareIntent.putExtra(Intent.EXTRA_TEXT,
+                "Hello! my name is micaiah i am a stylist " +
+                    "based in New York above is some of my haircuts! " +
+                    "if you want to see more please check me out at www.hairstyles.com/micaiah")
+            shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri)
+            shareIntent.type = "image/jpeg"
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            startActivity(Intent.createChooser(shareIntent, "send"))
+
+
+        }
     }
 
 

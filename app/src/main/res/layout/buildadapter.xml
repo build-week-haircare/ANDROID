@@ -4,6 +4,7 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:orientation="vertical"
               android:layout_width="match_parent"
+              android:id="@+id/hair_list"
               android:layout_height="wrap_content">
 
 
@@ -45,5 +46,8 @@
             android:textSize="27dp"
             tools:layout_editor_absoluteY="409dp"
             tools:layout_editor_absoluteX="-29dp"/>
+
+
+
 
 </LinearLayout>

@@ -11,8 +11,12 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.fragments.Signup
+import com.example.myapplication.Adapter.Haircutadapter
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.buildadapter.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         ShowSignupPage()
         ShowLoginPage()
@@ -36,25 +41,30 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
 
 
+        // Set a click listener for button
         signup_button.setOnClickListener {
 
-
+            // Initialize a new layout inflater instance
             val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
-
+            // Inflate a custom view using layout inflater
             val view = inflater.inflate(R.layout.sign_up_window, null)
 
+            // Initialize a new popup window
             val signUpWindow = PopupWindow (
-                view, LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT
+                view, LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT,true
+
 
             )
-
+            // Set an elevation for the popup window
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 signUpWindow.elevation = 10.0F
 
             }
+            // If API level 23 or higher then execute the code
             if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
 
+                // Create a new slide animation for the pop up window
                 val slideIn = Slide()
                 slideIn.slideEdge = Gravity.TOP
                 signUpWindow.enterTransition = slideIn
@@ -66,12 +76,16 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+
             val signUpButton = view.findViewById<Button>(R.id.btn_sign_up)
+
+            // Set a click listener to dismess the window
             signUpButton.setOnClickListener {
                 signUpWindow.dismiss()
 
             }
 
+            // Show the window on the app and the location to display the window
             TransitionManager.beginDelayedTransition(main_layout)
             signUpWindow.showAtLocation(
                 main_layout, Gravity.CENTER,0,0
@@ -102,7 +116,7 @@ class MainActivity : AppCompatActivity() {
             val view = inflater.inflate(R.layout.login_window, null)
 
             val loginWindow = PopupWindow (
-                view, LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT
+                view, LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT,true
 
 
             )

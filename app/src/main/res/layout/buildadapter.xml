@@ -11,7 +11,7 @@
     <ImageView
             android:id="@+id/profile_image"
             android:layout_width="match_parent"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/profilepicproject"
             android:layout_height="147dp"
             tools:layout_editor_absoluteY="227dp"
             tools:layout_editor_absoluteX="-27dp"/>
@@ -19,20 +19,20 @@
             android:id="@+id/cut_2"
             android:layout_width="match_parent"
             android:layout_height="153dp"
-            android:src="@android:drawable/ic_media_play"
+            android:src="@drawable/haircuttwo"
             tools:layout_editor_absoluteY="342dp"
             tools:layout_editor_absoluteX="-72dp"/>
 
     <ImageView
             android:id="@+id/cut_1"
             android:layout_width="match_parent"
-            android:src="@android:drawable/ic_menu_revert"
+            android:src="@drawable/haircutone"
             android:layout_height="170dp"/>
 
 
     <ImageView
             android:id="@+id/cut_3"
-            android:src="@android:drawable/checkbox_on_background"
+            android:src="@drawable/haircutthree"
             android:layout_width="match_parent"
             android:layout_height="130dp"
             tools:layout_editor_absoluteY="102dp"

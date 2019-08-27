@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
 
 
-        btn_create_acc.setOnClickListener {
+        signup_button.setOnClickListener {
 
 
             val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity() {
         transaction.commit()
 
 
-        btn_login.setOnClickListener {
+        stylist_button.setOnClickListener {
 
 
             val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -103,6 +103,7 @@ class MainActivity : AppCompatActivity() {
 
             val loginWindow = PopupWindow (
                 view, LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT
+
 
             )
 

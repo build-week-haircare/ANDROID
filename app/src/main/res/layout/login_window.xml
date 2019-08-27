@@ -26,7 +26,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="USERNAME"
-            android:inputType="textMultiLine"
+            android:text=""
+            android:inputType="text"
+
+
 
 
             />
@@ -34,6 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
+            android:inputType="textPassword"
+
             />
 
     <LinearLayout

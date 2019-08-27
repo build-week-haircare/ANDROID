@@ -25,6 +25,7 @@ class Login : Fragment() {
 
         return inflater!!.inflate(R.layout.activity_main,container,false)
 
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

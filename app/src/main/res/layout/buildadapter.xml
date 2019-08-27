@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+              xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:id="@+id/hair_list"
+              android:layout_height="wrap_content">
+
+
+    <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="match_parent"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_height="147dp"
+            tools:layout_editor_absoluteY="227dp"
+            tools:layout_editor_absoluteX="-27dp"/>
+    <ImageView
+            android:id="@+id/cut_2"
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:src="@android:drawable/ic_media_play"
+            tools:layout_editor_absoluteY="342dp"
+            tools:layout_editor_absoluteX="-72dp"/>
+
+    <ImageView
+            android:id="@+id/cut_1"
+            android:layout_width="match_parent"
+            android:src="@android:drawable/ic_menu_revert"
+            android:layout_height="170dp"/>
+
+
+    <ImageView
+            android:id="@+id/cut_3"
+            android:src="@android:drawable/checkbox_on_background"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            tools:layout_editor_absoluteY="102dp"
+            tools:layout_editor_absoluteX="16dp"/>
+
+    <TextView
+            android:id="@+id/bio"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:text="this is filler text"
+            android:textSize="27dp"
+            tools:layout_editor_absoluteY="409dp"
+            tools:layout_editor_absoluteX="-29dp"/>
+
+
+
+
+</LinearLayout>

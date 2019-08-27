@@ -11,8 +11,8 @@ import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import com.example.haircare.fragments.Signup
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.sign_up_window.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         ShowSignupPage()
+        ShowLoginPage()
     }
 
 
@@ -31,12 +32,12 @@ class MainActivity : AppCompatActivity() {
     fun ShowSignupPage() {
         val transaction = manager.beginTransaction()
         val frg_signup = Signup()
-        transaction.replace(R.id.fragment_holder,frg_signup)
         transaction.addToBackStack(null)
         transaction.commit()
 
 
         btn_create_acc.setOnClickListener {
+
 
             val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
@@ -84,4 +85,62 @@ class MainActivity : AppCompatActivity() {
     }
 
 
+    fun ShowLoginPage() {
+
+
+        val transaction = manager.beginTransaction()
+        transaction.addToBackStack(null)
+        transaction.commit()
+
+
+        btn_login.setOnClickListener {
+
+
+            val inflater: LayoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+
+
+            val view = inflater.inflate(R.layout.login_window, null)
+
+            val loginWindow = PopupWindow (
+                view, LinearLayout.LayoutParams.WRAP_CONTENT,LinearLayout.LayoutParams.WRAP_CONTENT
+
+            )
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                loginWindow.elevation = 10.0F
+
+            }
+            if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
+
+                val slideIn = Slide()
+                slideIn.slideEdge = Gravity.RIGHT
+                loginWindow.enterTransition = slideIn
+
+
+                val slideOut = Slide()
+                slideOut.slideEdge = Gravity.BOTTOM
+                loginWindow.exitTransition = slideOut
+
+            }
+
+            val loginButton = view.findViewById<Button>(R.id.btn_login_popup)
+            loginButton.setOnClickListener {
+                loginWindow.dismiss()
+
+            }
+
+            TransitionManager.beginDelayedTransition(main_layout)
+            loginWindow.showAtLocation(
+                main_layout, Gravity.CENTER,0,0
+            )
+
+
+
+
+        }
+
+    }
+
 }
+
+

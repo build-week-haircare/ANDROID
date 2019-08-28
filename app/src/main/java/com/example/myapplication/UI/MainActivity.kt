@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.R
 import com.example.myapplication.Adapter.Haircutadapter
+import com.example.myapplication.model.HairRepo
 import com.example.myapplication.model.haircuts
 import kotlinx.android.synthetic.main.buildadapter.*
 import kotlinx.android.synthetic.main.recycler.*
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
         val data = mutableListOf<haircuts>()
 
-        data.add(haircuts(profile_image,))
+        HairRepo.createhairlist()
 
 
         my_view.setHasFixedSize(true)

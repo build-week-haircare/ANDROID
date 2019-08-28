@@ -4,6 +4,7 @@ import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -20,6 +21,7 @@ class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Hair
         val hair2 : ImageView = view.cut_2
         val hair3 : ImageView = view.cut_3
         val text : TextView = view.bio
+        val button : Button = view.refresh_button
     }
 
      // calling the layout Inflater to get what our images will be
@@ -38,6 +40,7 @@ class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Hair
        holder.hair2.setImageDrawable(data[position].cut2)
        holder.hair3.setImageDrawable(data[position].cut3)
        holder.text.text = data[position].bio
+
     }
 
 }

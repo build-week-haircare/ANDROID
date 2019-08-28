@@ -6,14 +6,27 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.R
 import com.example.myapplication.Adapter.Haircutadapter
-
+import com.example.myapplication.model.haircuts
 import kotlinx.android.synthetic.main.buildadapter.*
+import kotlinx.android.synthetic.main.recycler.*
+
 //need to commit for a commit
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val data = mutableListOf<haircuts>()
+
+        data.add(haircuts(profile_image,))
+
+
+        my_view.setHasFixedSize(true)
+        val manager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
+        val adapter = Haircutadapter(data)
+        my_view.layoutManager = manager
+        my_view.adapter = adapter
 
     }
 }

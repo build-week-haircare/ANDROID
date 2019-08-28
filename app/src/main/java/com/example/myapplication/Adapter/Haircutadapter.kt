@@ -1,19 +1,17 @@
 package com.example.myapplication.Adapter
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.R
 import com.example.myapplication.model.HairRepo.Companion.hairlist
-import com.example.myapplication.model.haircuts
+import com.example.myapplication.model.Haircuts
 import kotlinx.android.synthetic.main.buildadapter.view.*
 
-class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Haircutadapter.ViewHolder>() {
+class Haircutadapter(val data: MutableList<Haircuts>): RecyclerView.Adapter<Haircutadapter.ViewHolder>() {
 
 //the image views
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){
@@ -23,7 +21,7 @@ class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Hair
         val hair3 : ImageView = view.cut_3
         val text : TextView = view.bio
 
-    fun bindmodel(hair:haircuts){
+    fun bindmodel(hair:Haircuts){
         profile.setImageResource(hair.profilepic)
         hair1.setImageResource(hair.cut1)
         hair2.setImageResource(hair.cut2)

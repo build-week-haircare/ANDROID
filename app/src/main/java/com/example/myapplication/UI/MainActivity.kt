@@ -7,8 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.R
 import com.example.myapplication.Adapter.Haircutadapter
 import com.example.myapplication.model.HairRepo
-import com.example.myapplication.model.haircuts
-import kotlinx.android.synthetic.main.buildadapter.*
+import com.example.myapplication.model.Haircuts
 import kotlinx.android.synthetic.main.recycler.*
 
 //need to commit for a commit
@@ -18,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val data = mutableListOf<haircuts>()
+        val data = mutableListOf<Haircuts>()
 
         HairRepo.createhairlist()
 

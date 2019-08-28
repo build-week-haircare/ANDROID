@@ -5,11 +5,12 @@ import android.os.Bundle
 import android.widget.Button
 import com.example.haircare.R
 import com.example.haircare.fragments.profile1_bio
-import com.example.haircare.fragments.profile1_review
+import com.example.haircare.fragments.profile1_works
 import kotlinx.android.synthetic.main.profile_1.*
 
 class ProfileActivity : AppCompatActivity() {
     var isBioLoaded = true
+    var isWorksLoaded = false
     val manager = supportFragmentManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +25,15 @@ class ProfileActivity : AppCompatActivity() {
             else
                 ShowBio()
         }
+
+        btn_Bio.setOnClickListener {
+            if (isWorksLoaded)
+                ShowBio()
+            else {
+                ShowWorks()
+            }
+
+        }
     }
 
     fun ShowBio() {
@@ -33,15 +43,19 @@ class ProfileActivity : AppCompatActivity() {
         transaction.addToBackStack(null)
         transaction.commit()
         isBioLoaded = true
+
+
+
     }
 
 
     fun ShowWorks() {
         val transaction = manager.beginTransaction()
-        val fragment = profile1_review()
+        val fragment = profile1_works()
         transaction.replace(R.id.profile_frg_holder, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
         isBioLoaded = false
+        isWorksLoaded=true
     }
 }

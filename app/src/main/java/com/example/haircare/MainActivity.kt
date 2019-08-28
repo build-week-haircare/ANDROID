@@ -6,6 +6,7 @@ import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.ContactsContract
 import android.transition.Slide
 import android.transition.TransitionManager
 import android.view.Gravity
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.fragments.Signup
 import com.example.myapplication.Adapter.Haircutadapter
 import com.example.myapplication.UI.MainActivity
+import com.example.myapplication.UI.ProfileActivity
 import com.example.myapplication.model.HairRepo
 import com.example.myapplication.model.haircuts
 import kotlinx.android.synthetic.main.activity_main.*
@@ -173,6 +175,10 @@ class MainActivity : AppCompatActivity() {
 
             val loginButton = view.findViewById<Button>(R.id.btn_login_popup)
             loginButton.setOnClickListener {
+                val context = this
+                val profileIntent = Intent(context,ProfileActivity::class.java)
+                startActivity(profileIntent)
+                finish()
                 loginWindow.dismiss()
 
             }

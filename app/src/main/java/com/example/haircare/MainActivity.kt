@@ -17,8 +17,12 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.fragments.Signup
 import com.example.myapplication.Adapter.Haircutadapter
+import com.example.myapplication.UI.MainActivity
+import com.example.myapplication.model.HairRepo
+import com.example.myapplication.model.haircuts
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.buildadapter.*
+import kotlinx.android.synthetic.main.recycler.*
 
 class MainActivity : AppCompatActivity() {
 //test
@@ -27,6 +31,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+
 
 
         ShowSignupPage()
@@ -100,6 +107,13 @@ class MainActivity : AppCompatActivity() {
 
             // Set a click listener to dismess the window
             signUpButton.setOnClickListener {
+               // val context = this
+                //var intent = Intent(context,Ha)
+                val context = this
+                val intent = Intent(context,MainActivity::class.java)
+                startActivity(intent)
+                finish()
+
                 signUpWindow.dismiss()
 
             }

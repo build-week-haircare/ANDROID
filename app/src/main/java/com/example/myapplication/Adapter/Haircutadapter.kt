@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.haircare.R
+import com.example.myapplication.model.HairRepo.Companion.hairlist
 import com.example.myapplication.model.haircuts
 import kotlinx.android.synthetic.main.buildadapter.view.*
 
@@ -20,12 +21,25 @@ class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Hair
         val hair2 : ImageView = view.cut_2
         val hair3 : ImageView = view.cut_3
         val text : TextView = view.bio
+
+
+        fun bindmodel(hair:haircuts){
+            profile.setImageResource(hair.profilepic)
+            hair1.setImageResource(hair.cut1)
+            hair2.setImageResource(hair.cut2)
+            hair3.setImageResource(hair.cut3)
+            text.text = hair.bio
+        }
+
+
+
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-      val viewGroup =  LayoutInflater.from(parent.context).inflate(R.layout.buildadapter,parent, false)
-       return ViewHolder(viewGroup)
+      return ViewHolder(LayoutInflater.from(parent.context)
+          .inflate(R.layout.buildadapter,parent,false) as View)
+
     }
 
     override fun getItemCount(): Int {
@@ -33,11 +47,8 @@ class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Hair
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-       holder.profile.setImageDrawable(data[position].profilepic)
-       holder.hair1.setImageDrawable(data[position].cut1)
-       holder.hair2.setImageDrawable(data[position].cut2)
-       holder.hair3.setImageDrawable(data[position].cut3)
-       holder.text.text = data[position].bio
+      val hair = hairlist[position]
+        holder.bindmodel(hair)
     }
 
 }

@@ -1,5 +1,7 @@
 package com.example.myapplication.UI
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -7,6 +9,7 @@ import com.example.haircare.R
 import com.example.haircare.fragments.profile1_bio
 import com.example.haircare.fragments.profile1_frg_reviews
 import com.example.haircare.fragments.profile1_works
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.profile_1.*
 
 class Profile_1_Activity : AppCompatActivity() {
@@ -48,6 +51,37 @@ class Profile_1_Activity : AppCompatActivity() {
             }
 
         }
+        btn_share1.setOnClickListener {
+            val imageUri = Uri.parse("android.resource://" + packageName
+                    + "/drawable/" + "profile1_cut1")
+            val shareIntent = Intent()
+            shareIntent.action = Intent.ACTION_SEND
+            shareIntent.putExtra(
+                Intent.EXTRA_TEXT,
+                "Hello! my name is Chad Watson i am a stylist " +
+                        "based in New York above is some of my haircuts! " +
+                        "if you want to see more please check me out at www.hairstyles.com/ChadWatson")
+            shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri)
+
+            shareIntent.type = "image/jpeg"
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+            startActivity(Intent.createChooser(shareIntent, "send"))
+
+
+
+
+        }
+
+
+        btn_mainmenu1.setOnClickListener {
+            val context = this
+            val profileIntent = Intent(context,MainActivity::class.java)
+            startActivity(profileIntent)
+            finish()
+
+
+        }
+
     }
 
     fun ShowBio() {

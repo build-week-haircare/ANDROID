@@ -43,9 +43,12 @@ class MainActivity : AppCompatActivity() {
                     "based in New York above is some of my haircuts! " +
                     "if you want to see more please check me out at www.hairstyles.com/micaiah")
             shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri)
+
             shareIntent.type = "image/jpeg"
             shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
             startActivity(Intent.createChooser(shareIntent, "send"))
+
+
 
 
         }

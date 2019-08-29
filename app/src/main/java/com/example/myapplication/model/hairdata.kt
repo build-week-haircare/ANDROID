@@ -24,7 +24,7 @@ val bios = arrayOf(
             " one year and then came to Portland in 2012. I worked at Rooks " +
             "Barbershop for 2 years and now am at Refuge Barbershop in NE Portland." ,
 //profile pic three
-    "I am head barber and proud owner of Refuge Barbershop. I have 18 years experience and have dedicated myself to my craft. " +
+    "I am the head barber and proud owner of Refuge Barbershop. I have 18 years experience and have dedicated myself to my craft. " +
             "I apprenticed with a master barber for first three years of my career and forever thankful for the opportunity. " +
             "The apprenticeship and my valued customers have made" +
             " this an amazing experience"

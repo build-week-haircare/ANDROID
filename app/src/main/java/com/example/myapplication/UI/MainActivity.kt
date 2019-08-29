@@ -15,6 +15,7 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import com.example.haircare.R
 import com.example.haircare.fragments.Signup
+import com.example.myapplication.model.Userinfo
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -47,6 +48,18 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(shareIntent, "send"))
 
 
+        }
+
+        user_button.setOnClickListener {
+
+        }
+
+        user_button.setOnClickListener {
+            val context = this
+
+            val intent = Intent(context,recyclertest::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 
@@ -185,6 +198,8 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+
 
 }
 

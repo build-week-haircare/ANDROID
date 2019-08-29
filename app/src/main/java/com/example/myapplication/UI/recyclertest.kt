@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.haircare.R
 import com.example.myapplication.Adapter.Haircutadapter
 import com.example.myapplication.model.HairRepo
+import kotlinx.android.synthetic.main.buildadapter.*
 
 import kotlinx.android.synthetic.main.recycler.*
 
@@ -15,7 +16,7 @@ class recyclertest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recycler)
-
+           
 
 
         HairRepo.createhairlist()

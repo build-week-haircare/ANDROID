@@ -183,7 +183,7 @@ class MainActivity : AppCompatActivity() {
             val loginButton = view.findViewById<Button>(R.id.btn_login_popup)
             loginButton.setOnClickListener {
                 val context = this
-                val profileIntent = Intent(context,Profile_3_Activity::class.java)
+                val profileIntent = Intent(context,Profile_1_Activity::class.java)
                 startActivity(profileIntent)
                 finish()
                 loginWindow.dismiss()

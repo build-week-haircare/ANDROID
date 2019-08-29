@@ -41,3 +41,4 @@ val mywork = arrayOf(
     R.drawable.haircutthree_two,
     R.drawable.haircutthree_three
 )
+

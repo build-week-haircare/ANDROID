@@ -12,7 +12,9 @@
         <activity android:name="com.example.myapplication.UI.Profile_3_Activity"></activity>
         <activity android:name="com.example.myapplication.UI.Profile_2_Activity" />
         <activity android:name="com.example.myapplication.UI.Profile_1_Activity" />
+        <activity android:name="com.example.myapplication.UI.recyclertest" />
         <activity android:name="com.example.myapplication.UI.MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,5 +22,6 @@
             </intent-filter>
         </activity>
     </application>
+
 
 </manifest>

@@ -9,7 +9,7 @@ import com.example.haircare.fragments.profile1_frg_reviews
 import com.example.haircare.fragments.profile1_works
 import kotlinx.android.synthetic.main.profile_1.*
 
-class ProfileActivity : AppCompatActivity() {
+class Profile_1_Activity : AppCompatActivity() {
     var isBioLoaded = true
     var isWorksLoaded = false
     var isReviewsLoaded = false
@@ -27,7 +27,7 @@ class ProfileActivity : AppCompatActivity() {
             else if (isReviewsLoaded)
                 ShowWorks()
             else
-                ShowBio()
+                ShowWorks()
         }
 
         btn_Bio.setOnClickListener {
@@ -43,7 +43,7 @@ class ProfileActivity : AppCompatActivity() {
                     ShowReviews()
 
                     else
-                    ShowBio()
+                    ShowReviews()
 
             }
 

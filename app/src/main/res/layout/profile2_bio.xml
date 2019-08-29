@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+            android:id="@+id/textView3"
+            android:layout_width="403dp"
+            android:layout_height="298dp"
+            android:text="I have been working in the beauty industry since I was 19.
+    I love it as much as I did the first time I stood behind my chair.
+    I am the former owner of Nolan and Co. in Oak Lawn.  I regularly attend
+    classes to learn the newest trends and about the newest hair products.
+    Helping to make someone feel great about themselves is my passion.
+    Don't be afraid of change."
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.197"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

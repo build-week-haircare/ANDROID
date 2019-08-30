@@ -10,10 +10,10 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity android:name="com.example.myapplication.UI.CustomActivity"></activity>
-        <activity android:name="com.example.myapplication.UI.Profile_3_Activity" />
-        <activity android:name="com.example.myapplication.UI.Profile_2_Activity" />
-        <activity android:name="com.example.myapplication.UI.Profile_1_Activity" />
-        <activity android:name="com.example.myapplication.UI.recyclertest" />
+        <activity android:name="com.example.myapplication.UI.Profile3Activity" />
+        <activity android:name="com.example.myapplication.UI.Profile2Activity" />
+        <activity android:name="com.example.myapplication.UI.Profile1Activity" />
+        <activity android:name="com.example.myapplication.UI.Recyclertest" />
         <activity android:name="com.example.myapplication.UI.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

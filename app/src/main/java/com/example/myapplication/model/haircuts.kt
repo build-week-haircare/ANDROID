@@ -2,4 +2,7 @@ package com.example.myapplication.model
 
 import android.graphics.drawable.Drawable
 
-class haircuts(val profilepic:Drawable, val cut1:Drawable, val cut2:Drawable,val cut3: Drawable, val bio:String)
+
+data class haircuts(val profilepic:Int, val cut1:Int, val cut2:Int,val cut3: Int, val bio:String,
+                    val upvote: Int = 0, val downvote: Int = 0)
+// what our recyclerview holds

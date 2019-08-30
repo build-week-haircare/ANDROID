@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="66dp"
+            android:layout_height="187dp"
+            android:layout_marginBottom="176dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.011"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/review3_pic1" />
+
+    <TextView
+            android:id="@+id/textView4"
+            android:layout_width="307dp"
+            android:layout_height="108dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="200dp"
+            android:text="I really enjoy the staff, the clean and friendly atmosphere, the genuine and superior customer service too! All around most certainly worth my time and money! Keep up the great work! "
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView8" />
+
+    <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="66dp"
+            android:layout_height="152dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/review3_pic2" />
+
+    <TextView
+            android:id="@+id/textView5"
+            android:layout_width="320dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="16dp"
+            android:text="Jimmy did a great Job!! First time here and it was great! Came away with a fresh, clean look. Ready for the long week ahead! Thanks!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView9"
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.792" />
+</androidx.constraintlayout.widget.ConstraintLayout>

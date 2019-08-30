@@ -33,10 +33,22 @@ val bios = arrayOf(
 val mywork = arrayOf(
     R.drawable.haircutone,
     R.drawable.haircuttwo,
-    R.drawable.haircutthree,
+    R.drawable.haircutthree
+
+)
+
+val mywork2 = arrayOf(
+
     R.drawable.haircutone_two,
     R.drawable.haircuttwo_two,
     R.drawable.haircutthree_two,
+    R.drawable.haircutone_three,
+    R.drawable.haircutthree_two,
+    R.drawable.haircutthree_three
+)
+
+val mywork3 = arrayOf(
+
     R.drawable.haircutone_three,
     R.drawable.haircutthree_two,
     R.drawable.haircutthree_three

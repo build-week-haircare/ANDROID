@@ -17,29 +17,40 @@
             android:text="LOGIN"
             android:textStyle="bold"
             android:textSize="24dp"
+            android:textColor="#fff"
             android:gravity="center_horizontal"
 
             />
 
     <EditText
-            android:id="@+id/user_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="USERNAME"
-            android:text=""
-            android:inputType="text"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:background="@android:color/transparent"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:hint="Username"
+            android:textColorHint="#fff"
+            android:maxLines="1"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:layout_marginTop="70dp"/>
 
 
-
-
-            />
+            android:textColor="#FFFFFF" />
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="PASSWORD"
             android:inputType="textPassword"
-
-            />
+            android:ems="10"
+            android:drawablePadding="12dp"
+            android:padding="8dp"
+            android:hint="Password"
+            android:textColorHint="#fff"
+            android:maxLines="1"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/ic_action_pass"/>
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -60,6 +71,35 @@
                 android:layout_weight="1"
                 android:background="@drawable/gradient_bg"
                 />
+    </LinearLayout>
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        <Button
+                android:id="@+id/profile_1"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile1"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_bg"
+
+                />
+        <Button
+                android:id="@+id/profile_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="profile2"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_bg"
+                />
+        <Button
+                android:id="@+id/profile_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="profile3"
+                android:layout_weight="1"
+                android:background="@drawable/gradient_bg" />
     </LinearLayout>
 
 </LinearLayout>

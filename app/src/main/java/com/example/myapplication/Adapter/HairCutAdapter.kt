@@ -1,6 +1,5 @@
 package com.example.myapplication.Adapter
 
-import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,7 +11,7 @@ import com.example.myapplication.model.HairRepo.Companion.hairlist
 import com.example.myapplication.model.haircuts
 import kotlinx.android.synthetic.main.buildadapter.view.*
 
-class Haircutadapter(val data: MutableList<haircuts>): RecyclerView.Adapter<Haircutadapter.ViewHolder>() {
+class HairCutAdapter(val data: MutableList<haircuts>): RecyclerView.Adapter<HairCutAdapter.ViewHolder>() {
 
 
     class ViewHolder(view: View): RecyclerView.ViewHolder(view){

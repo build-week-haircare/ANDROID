@@ -2,7 +2,6 @@ package com.example.myapplication.UI
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -15,7 +14,6 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import com.example.haircare.R
 import com.example.haircare.fragments.Signup
-import com.example.myapplication.model.Userinfo
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -43,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         user_button.setOnClickListener {
             val context = this
 
-            val intent = Intent(context,recyclertest::class.java)
+            val intent = Intent(context,Recyclertest::class.java)
             startActivity(intent)
             finish()
         }
@@ -110,7 +108,7 @@ class MainActivity : AppCompatActivity() {
                // val context = this
                 //var intent = Intent(context,Ha)
                 val context = this
-                val intent = Intent(context,recyclertest::class.java)
+                val intent = Intent(context,Recyclertest::class.java)
                 startActivity(intent)
                 finish()
 
@@ -174,7 +172,7 @@ class MainActivity : AppCompatActivity() {
             val loginButton = view.findViewById<Button>(R.id.btn_login_popup)
             loginButton.setOnClickListener {
                 val context = this
-                val profileIntent = Intent(context,Profile_1_Activity::class.java)
+                val profileIntent = Intent(context,Profile1Activity::class.java)
                 startActivity(profileIntent)
                 finish()
                 loginWindow.dismiss()
@@ -184,7 +182,7 @@ class MainActivity : AppCompatActivity() {
             val profile1Button = view.findViewById<Button>(R.id.profile_1)
             profile1Button.setOnClickListener {
                 val context = this
-                val profileIntent = Intent(context,Profile_1_Activity::class.java)
+                val profileIntent = Intent(context,Profile1Activity::class.java)
                 startActivity(profileIntent)
                 finish()
                 loginWindow.dismiss()
@@ -194,7 +192,7 @@ class MainActivity : AppCompatActivity() {
             val profile2Button = view.findViewById<Button>(R.id.profile_2)
             profile2Button.setOnClickListener {
                 val context = this
-                val profileIntent = Intent(context,Profile_2_Activity::class.java)
+                val profileIntent = Intent(context,Profile2Activity::class.java)
                 startActivity(profileIntent)
                 finish()
                 loginWindow.dismiss()
@@ -204,7 +202,7 @@ class MainActivity : AppCompatActivity() {
             val profile3Button = view.findViewById<Button>(R.id.profile_3)
             profile3Button.setOnClickListener {
                 val context = this
-                val profileIntent = Intent(context,Profile_3_Activity::class.java)
+                val profileIntent = Intent(context,Profile3Activity::class.java)
                 startActivity(profileIntent)
                 finish()
                 loginWindow.dismiss()

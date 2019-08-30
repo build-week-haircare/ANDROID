@@ -6,13 +6,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.haircare.R
-import com.example.haircare.fragments.profile1_bio
-import com.example.haircare.fragments.profile1_frg_reviews
-import com.example.haircare.fragments.profile1_works
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.profile_1.*
+import com.example.haircare.fragments.*
+import kotlinx.android.synthetic.main.activity_profile_2_.*
 
-class Profile_1_Activity : AppCompatActivity() {
+class Profile2Activity : AppCompatActivity(){
     var isBioLoaded = true
     var isWorksLoaded = false
     var isReviewsLoaded = false
@@ -20,11 +17,11 @@ class Profile_1_Activity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.profile_1)
+        setContentView(R.layout.activity_profile_2_)
 
-        val works = findViewById<Button>(R.id.btn_myWork)
+        val works = findViewById<Button>(R.id.btn_myWork2)
         ShowBio()
-        btn_myWork.setOnClickListener {
+        btn_myWork2.setOnClickListener {
             if (isBioLoaded)
                 ShowWorks()
             else if (isReviewsLoaded)
@@ -33,34 +30,34 @@ class Profile_1_Activity : AppCompatActivity() {
                 ShowWorks()
         }
 
-        btn_Bio.setOnClickListener {
+        btn_Bio2.setOnClickListener {
             if (isWorksLoaded)
                 ShowBio()
             else if (isReviewsLoaded)
                 ShowBio()
             else ShowBio()
-            btn_reviews.setOnClickListener {
+            btn_reviews2.setOnClickListener {
                 if (isBioLoaded)
                     ShowReviews()
                 else if (isWorksLoaded)
                     ShowReviews()
 
-                    else
+                else
                     ShowReviews()
 
             }
 
         }
-        btn_share1.setOnClickListener {
+        btn_share2.setOnClickListener {
             val imageUri = Uri.parse("android.resource://" + packageName
-                    + "/drawable/" + "profile1_cut1")
+                    + "/drawable/" + "profile2_cut1")
             val shareIntent = Intent()
             shareIntent.action = Intent.ACTION_SEND
             shareIntent.putExtra(
                 Intent.EXTRA_TEXT,
-                "Hello! my name is Chad Watson i am a stylist " +
-                        "based in New York above is some of my haircuts! " +
-                        "if you want to see more please check me out at www.hairstyles.com/ChadWatson")
+                "Hello! my name is Ashley Depew i am a stylist " +
+                        "based in Florida above is some of my haircuts! " +
+                        "if you want to see more please check me out at www.hairstyles.com/Ashley Depew")
             shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri)
 
             shareIntent.type = "image/jpeg"
@@ -73,7 +70,7 @@ class Profile_1_Activity : AppCompatActivity() {
         }
 
 
-        btn_mainmenu1.setOnClickListener {
+        btn_mainmenu2.setOnClickListener {
             val context = this
             val profileIntent = Intent(context,MainActivity::class.java)
             startActivity(profileIntent)
@@ -81,13 +78,12 @@ class Profile_1_Activity : AppCompatActivity() {
 
 
         }
-
     }
 
     fun ShowBio() {
         val transaction = manager.beginTransaction()
-        val fragment = profile1_bio()
-        transaction.replace(R.id.profile_frg_holder, fragment)
+        val fragment = Profile2frgBio()
+        transaction.replace(R.id.profile_frg_holder2, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
         isBioLoaded = true
@@ -101,8 +97,8 @@ class Profile_1_Activity : AppCompatActivity() {
 
     fun ShowWorks() {
         val transaction = manager.beginTransaction()
-        val fragment = profile1_works()
-        transaction.replace(R.id.profile_frg_holder, fragment)
+        val fragment = Profile2frgWorks()
+        transaction.replace(R.id.profile_frg_holder2, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
         isBioLoaded = false
@@ -113,8 +109,8 @@ class Profile_1_Activity : AppCompatActivity() {
 
     fun ShowReviews() {
         val transaction = manager.beginTransaction()
-        val fragment = profile1_frg_reviews()
-        transaction.replace(R.id.profile_frg_holder, fragment)
+        val fragment = Profile2frgReviews()
+        transaction.replace(R.id.profile_frg_holder2, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
         isBioLoaded = false

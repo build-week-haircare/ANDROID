@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.haircare.R
 
-class profile2_frg_reviews : Fragment() {
+class Profile2frgReviews : Fragment() {
 
     override fun onAttach(context: Context?) {
 

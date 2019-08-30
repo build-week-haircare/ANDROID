@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.haircare.R
 
-class profile1_bio : Fragment() {
+class Profile1frgReviews : Fragment() {
 
     override fun onAttach(context: Context?) {
 
@@ -22,7 +22,7 @@ class profile1_bio : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        return inflater!!.inflate(R.layout.profile_bio1,container,false)
+        return inflater!!.inflate(R.layout.profile1_reviews,container,false)
 
     }
 

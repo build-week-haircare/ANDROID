@@ -25,18 +25,19 @@
             android:id="@+id/user_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#11000000"
+            android:ems="10"
             android:hint="USERNAME"
-            android:text=""
             android:inputType="text"
 
 
-
-
-            />
+            android:textColor="#FFFFFF" />
     <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
+            android:ems="10"
+            android:background="#11000000"
             android:inputType="textPassword"
 
             />

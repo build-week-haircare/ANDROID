@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/haircare_icon"
             android:layout_gravity="center"
-            android:layout_marginBottom="100dp"
+
             />
     <Button
             android:id="@+id/stylist_button"
@@ -70,7 +70,7 @@
 
 
     <Button
-            android:id="@+id/share_photo"
+            android:id="@+id/rate_stylist"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
         android:text="Rate Stylist"

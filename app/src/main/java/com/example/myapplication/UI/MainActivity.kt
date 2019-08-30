@@ -34,25 +34,7 @@ class MainActivity : AppCompatActivity() {
         ShowSignupPage()
         ShowLoginPage()
 
-        share_photo.setOnClickListener {
-            val imageUri = Uri.parse("android.resource://" + packageName
-                    + "/drawable/" + "haircutone")
-            val shareIntent = Intent()
-            shareIntent.action = Intent.ACTION_SEND
-            shareIntent.putExtra(Intent.EXTRA_TEXT,
-                "Hello! my name is micaiah i am a stylist " +
-                    "based in New York above is some of my haircuts! " +
-                    "if you want to see more please check me out at www.hairstyles.com/micaiah")
-            shareIntent.putExtra(Intent.EXTRA_STREAM, imageUri)
 
-            shareIntent.type = "image/jpeg"
-            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            startActivity(Intent.createChooser(shareIntent, "send"))
-
-
-
-
-        }
 
         user_button.setOnClickListener {
 
@@ -65,6 +47,14 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+
+        rate_stylist.setOnClickListener {
+            val context = this
+            val intent = Intent(context,CustomActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
     }
 
 
@@ -190,6 +180,38 @@ class MainActivity : AppCompatActivity() {
                 loginWindow.dismiss()
 
             }
+
+            val profile1Button = view.findViewById<Button>(R.id.profile_1)
+            profile1Button.setOnClickListener {
+                val context = this
+                val profileIntent = Intent(context,Profile_1_Activity::class.java)
+                startActivity(profileIntent)
+                finish()
+                loginWindow.dismiss()
+
+            }
+
+            val profile2Button = view.findViewById<Button>(R.id.profile_2)
+            profile2Button.setOnClickListener {
+                val context = this
+                val profileIntent = Intent(context,Profile_2_Activity::class.java)
+                startActivity(profileIntent)
+                finish()
+                loginWindow.dismiss()
+
+            }
+
+            val profile3Button = view.findViewById<Button>(R.id.profile_3)
+            profile3Button.setOnClickListener {
+                val context = this
+                val profileIntent = Intent(context,Profile_3_Activity::class.java)
+                startActivity(profileIntent)
+                finish()
+                loginWindow.dismiss()
+
+            }
+
+
 
             TransitionManager.beginDelayedTransition(main_layout)
             loginWindow.showAtLocation(
